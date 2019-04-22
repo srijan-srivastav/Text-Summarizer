@@ -1,0 +1,30 @@
+{% extends "summary/base.html"%}
+
+
+{% block content %}
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('div.hidden').fadeIn(2000).removeClass('hidden');
+});
+</script>
+<div class = "hidden">
+<div class="container">
+  <div class="content">
+    <h1 style="color: white" >Tired of reading the whole thing? Get instant Summary!</h1>
+    <br>
+    <p style="font-family: 'Roboto';font-size: 20 px;">Type in the link here, press submit and voila!</p>
+    <br>
+    <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <br>
+            <button type="submit" style="background-color: rgb(139, 197, 66);">Submit</button>
+   </form>
+    
+  </div>
+</div>
+</div>
+
+
+{%endblock%}

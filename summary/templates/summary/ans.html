@@ -1,0 +1,20 @@
+{% extends "summary/base.html"%}
+
+
+{% block content %}
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('div.hidden').fadeIn(2000).removeClass('hidden');
+});
+</script>
+<div class = "hidden">
+<div class="container">
+  <div class="content">
+    <p>{{text}}</p>
+  </div>
+</div>
+</div>
+
+
+{%endblock%}
